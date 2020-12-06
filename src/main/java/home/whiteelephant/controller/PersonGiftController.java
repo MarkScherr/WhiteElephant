@@ -20,6 +20,7 @@ public class PersonGiftController {
     }
 
     @GetMapping(PERSON_URI + "/all")
+    @CrossOrigin(origins = "https://markscherr.github.io")
     private List<PersonGift> getGiftsByName() {
         return service.getAllChosenGifts();
     }
