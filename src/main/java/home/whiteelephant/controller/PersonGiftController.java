@@ -24,9 +24,10 @@ public class PersonGiftController {
         return service.getAllChosenGifts();
     }
 
-    @PostMapping(PERSON_URI)
-    private boolean setGiftsByName(@RequestBody PersonGift personGift) {
-        return service.addPersonGift(personGift);
+    @GetMapping(PERSON_URI + "/{name}/{giftName}")
+    private boolean setGiftsByName(@PathVariable("name") String name,
+                                   @PathVariable("giftName") String giftName) {
+        return service.addPersonGift(new PersonGift(name, giftName));
     }
 
     @DeleteMapping(PERSON_URI)

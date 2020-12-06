@@ -7,6 +7,10 @@ import javax.persistence.Id;
 
 @Entity
 public class PersonGift {
+    public PersonGift(String name, String giftName) {
+        this.name = name;
+        this.giftName = giftName;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
