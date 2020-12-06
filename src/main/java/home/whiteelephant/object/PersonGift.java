@@ -7,6 +7,9 @@ import javax.persistence.Id;
 
 @Entity
 public class PersonGift {
+    public PersonGift() {
+
+    }
     public PersonGift(String name, String giftName) {
         this.name = name;
         this.giftName = giftName;
