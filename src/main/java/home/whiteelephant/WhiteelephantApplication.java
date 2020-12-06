@@ -23,7 +23,7 @@ public class WhiteelephantApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/greeting-javaconfig").allowedOrigins("https://markscherr.github.io");
+				registry.addMapping("/person/all").allowedOrigins("https://markscherr.github.io");
 			}
 		};
 	}
